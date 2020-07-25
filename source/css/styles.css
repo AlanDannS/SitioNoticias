@@ -4,6 +4,7 @@
 :root{
     --black-color: #000;
     --white-color: #fff;
+    --red-color: #ff0000;
 }
 
 *{
@@ -74,4 +75,19 @@ padding: 10px;
 .nav-main ul.nav-menu{
     flex: 1;
     margin-left: 20px;
+}
+
+/* Showcase */
+
+.showcase{
+    width: 100%;
+    background: var(--red-color);
+    height: 550px;
+    background: url(../img/showcase.jpg) no-repeat center center/cover;
+    filter: grayscale(60%);
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
