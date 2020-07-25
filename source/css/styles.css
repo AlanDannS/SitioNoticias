@@ -90,6 +90,7 @@ hr{
     background: url(../img/showcase.jpg) no-repeat center center/cover;
     filter: grayscale(60%);
     padding-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,3 +120,39 @@ hr{
     margin-bottom: 10px;
 }
 
+/* News Cards */
+.news-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 10px 0;
+}
+
+.news-cards div:hover{
+background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px
+}
+
+.news-cards div img{
+    width: 100%;
+    height: 180px;
+}
+.news-cards h3{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.news-cards a{
+    padding: 10px 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards a:hover{
+text-decoration: underline;
+}
