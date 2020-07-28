@@ -6,6 +6,9 @@
     --white-color: #fff;
     --red-color: #ff0000;
     --obs-color: #262626;
+    --footer-color: #2f2640;
+    --footer-tex: #616161;
+    --footer-cont: #2f3640;
 }
 
 *{
@@ -78,6 +81,15 @@ padding: 10px;
     margin-left: 20px;
 }
 
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    display: none; 
+    z-index: 2;
+    font-size: 1.5rem;
+}
 /* Showcase */
 hr{
     margin: 10px 0;
@@ -85,16 +97,15 @@ hr{
 
 .showcase{
     width: 100%;
-    background: var(--red-color);
     height: 550px;
     background: url(../img/showcase.jpg) no-repeat center center/cover;
-    filter: grayscale(60%);
-    padding-bottom: 50px;
-    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: flex-end;
+    padding: 50px;
+    margin-bottom: 20px;
 }
 
 .btn{
@@ -175,4 +186,153 @@ text-decoration: underline;
 .cards-banner-one p,
 .cards-banner-one h2{
     margin: 10px 0 20px 0;
+}
+
+/* Cards Banner Two */
+.cards-banner-two{
+    width: 100%;
+    height: 350px;
+    background: url(../img/patron2.jpg) no-repeat center center/Cover;
+    background-size: 100%;
+    background-position: 25% 25%;
+    margin-bottom: 40px;
+}
+
+.cards-banner-two .content{
+    width: 50%;
+    padding: 100px 0 0 30px;
+}
+
+.cards-banner-two p,
+.cards-banner-two h2{
+    margin: 10px 0 20px 0;
+}
+
+/* Social */
+.social{
+    margin: 50px;
+}
+
+.social p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a{
+    margin: 0 30px;
+}
+
+.links a i{
+    font-size: 3rem;
+}
+
+/* Footer links */
+
+.footer-links{
+    background-color: var(--footer-color);
+    color: var(--footer-tex);
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container ul{
+    margin: 0 auto;
+}
+
+.footer-container ul li{
+    line-height: 2.2;
+}
+
+.footer-container ul li a:hover{
+    cursor: pointer;
+    border-bottom: 1px solid var(--white-color);
+}
+
+.footer{
+    background: var(--footer-cont);
+    color: var(--footer-tex);
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media ( max-width: 700px ){
+    .menu-btn{
+        display: block;
+    }
+    .nav-main{
+        background: none;
+    }
+    .nav-main ul.nav-menu li{
+        font-size: 14px;
+    }
+
+    .nav-main ul.nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--footer-cont);
+        height: 100%;
+        transform: translateX(-400px);
+        padding: 30px;
+        opacity: .9 ;
+        transition: transform .5s ease-in-out;
+    }
+
+    .nav-main ul.nav-menu.show{
+        transform: translateX(-20px);
+    }
+
+    .nav-main ul.nav-menu-right{
+        margin-right: 50px;
+    }
+
+    .news-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-banner-one .content{
+        width: 80%;
+    }
+
+    .cards-banner-two .content{
+        width: 80%;
+    }
+
+    .footer-links .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media ( max-width: 500px ){
+    .news-cards{
+        grid-template-columns: 1fr;
+    }
+
+    .news-cards img{
+        height: 240px;
+    }
+
+    .cards-banner-one .content,
+    .cards-banner-two .content{
+        width: 100%;
+        padding: 60px 20px;
+    }
 }
